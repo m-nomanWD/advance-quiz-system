@@ -1,11 +1,23 @@
 import './App.css'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom'
+
+import { Home, TeacherDashboard, SetPaper } from './pages'
+
 
 function App() {
-
-
   return (
     <>
-      <h1 className='text-red-500 text-3xl font-bold'>Quiz App Home</h1>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path='/teacher-dashboard' element={<TeacherDashboard />} />
+          <Route path='/set-paper' element={<SetPaper />} />
+        </Routes>
+      </Router>
     </>
   )
 }

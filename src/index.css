@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-font_montserrat;
+  }
+  nav {
+    @apply flex justify-center mx-auto h-[72px] items-center px-4;
+  }
+  h1 {
+    @apply font-font_palanquin font-bold text-3xl capitalize;
+  }
+  li {
+    @apply text-white list-none mr-2 cursor-pointer capitalize;
+  }
+  .icon {
+    @apply text-primary_blue text-xl cursor-pointer;
+  }
+}

@@ -9,6 +9,20 @@
   body {
     @apply font-font_montserrat;
   }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 1px solid #ccc; /* Optional: Add border if needed */
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .date-no-icon::-webkit-calendar-picker-indicator {
+    display: block;
+  }
+
   nav {
     @apply flex justify-center mx-auto h-[72px] items-center px-4;
   }
@@ -17,6 +31,12 @@
   }
   li {
     @apply text-white list-none mr-2 cursor-pointer capitalize;
+  }
+  .input-container {
+    @apply my-2 rounded-md w-full;
+  }
+  .input {
+    @apply outline-none w-full px-4 h-10 rounded-md border  focus:border-primary_blue text-sm;
   }
   .icon {
     @apply text-primary_blue text-xl cursor-pointer;

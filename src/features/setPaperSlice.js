@@ -1,16 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  testId: '1723297616841',
-  testTitle: 'bio',
-  teacherId: 'T001',
-  class: '',
+  testId: '',
+  testTitle: '',
+  teacherId: '12AHG',
+  paperType: '',
   subject: '',
   totalQuestions: '',
   totalMarks: '',
-  totalTime: '',
-  prepDate: '2024-08-10T13:46:56.842Z',
+  duration: '',
+  prepDate: '',
   dueDate: '',
+  note: 'During Test Toggling, Closing and Minimizing Window is not allowed',
   questions: [
     {
       questionTitle: 'what is bio',
@@ -35,7 +36,35 @@ const setPaperSlice = createSlice({
     setPaperInfo: (state, action) => {
       console.log('setpaper info')
     },
+    setTitle: (state, action) => {
+      state.testTitle = action.payload
+      console.log(state.testTitle)
+    },
+    setDuration: (state, action) => {
+      state.duration = action.payload
+      console.log(state.duration)
+    },
+    setTotalQuestions: (state, action) => {
+      state.totalQuestions = action.payload
+      console.log(state.totalQuestions)
+    },
+    setDueDate: (state, action) => {
+      state.dueDate = action.payload
+      console.log(state.dueDate)
+    },
+    setPaperType: (state, action) => {
+      state.paperType = action.payload
+      console.log(state.paperType)
+    },
   },
 })
 export default setPaperSlice.reducer
-export const { setPaperInfo, setQuestion } = setPaperSlice.actions
+export const {
+  setPaperInfo,
+  setQuestion,
+  setTitle,
+  setDuration,
+  setTotalQuestions,
+  setDueDate,
+  setPaperType,
+} = setPaperSlice.actions

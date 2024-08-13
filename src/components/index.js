@@ -8,6 +8,9 @@ import DashboardMainConatiner from './dashboard_main_container/DashboardMainCont
 import QuestionsContainer from './paper_setter/QuestionsContainer'
 import InputText from './atoms/InputText'
 import Button from './atoms/Button'
+import InputSelect from './atoms/InputSelect'
+import InputDate from './atoms/InputDate'
+import PaperHead from './forms/PaperHead'
 export {
   Navbar,
   PaperToolbar,
@@ -18,5 +21,8 @@ export {
   DashboardMainConatiner,
   QuestionsContainer,
   InputText,
+  InputDate,
+  InputSelect,
   Button,
+  PaperHead,
 }

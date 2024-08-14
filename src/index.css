@@ -38,6 +38,9 @@
   .input {
     @apply outline-none w-full px-4 h-10 rounded-md border  focus:border-primary_blue text-sm;
   }
+  .btn {
+    @apply bg-primary_blue border-none hover:opacity-85  py-2 rounded-md text-white tracking-widest font-font_palanquin text-lg mt-4;
+  }
   .icon {
     @apply text-primary_blue text-xl cursor-pointer;
   }

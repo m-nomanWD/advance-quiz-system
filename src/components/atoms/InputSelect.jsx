@@ -11,10 +11,13 @@ export default function InputSelect({ options, handleClick, value }) {
  }
  return (
   <div className='input-container relative flex items-center'>
-   <select name="" id="" className='input ' onChange={(e) => handleOnChange(e)}
-    value={value} >
+   <select
+    className='input '
+    onChange={(e) => handleOnChange(e)}
+   >
+    <option >{value}</option>
     {
-     options.map((opt, index) => {
+     options && options.map((opt, index) => {
       return <option key={index} value={opt.name}>{opt.name}</option>
      })
     }

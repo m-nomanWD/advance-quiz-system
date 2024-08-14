@@ -30,4 +30,104 @@ export const testTypes = [
   { id: 17, name: 'ISSB (Inter-Services Selection Board)' },
   { id: 18, name: 'Army Recruitment Tests' },
 ]
+export const subjects = [
+  {
+    id: 1,
+    name: 'Mathematics',
+    topics: ['Algebra', 'Calculus', 'Geometry', 'Trigonometry', 'Statistics'],
+  },
+  {
+    id: 2,
+    name: 'Physics',
+    topics: [
+      'Mechanics',
+      'Thermodynamics',
+      'Electromagnetism',
+      'Optics',
+      'Quantum Mechanics',
+    ],
+  },
+  {
+    id: 3,
+    name: 'Chemistry',
+    topics: [
+      'Organic Chemistry',
+      'Inorganic Chemistry',
+      'Physical Chemistry',
+      'Analytical Chemistry',
+      'Biochemistry',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Biology',
+    topics: ['Genetics', 'Ecology', 'Cell Biology', 'Anatomy', 'Physiology'],
+  },
+  {
+    id: 5,
+    name: 'Computer Science',
+    topics: [
+      'Data Structures',
+      'Algorithms',
+      'Database Management',
+      'Operating Systems',
+      'Computer Networks',
+    ],
+  },
+  {
+    id: 6,
+    name: 'English',
+    topics: [
+      'Grammar',
+      'Literature',
+      'Writing Skills',
+      'Comprehension',
+      'Vocabulary',
+    ],
+  },
+  {
+    id: 7,
+    name: 'History',
+    topics: [
+      'Ancient Civilizations',
+      'Medieval History',
+      'Modern History',
+      'World Wars',
+      'Revolutions',
+    ],
+  },
+  {
+    id: 8,
+    name: 'Geography',
+    topics: [
+      'Physical Geography',
+      'Human Geography',
+      'Climatology',
+      'Cartography',
+      'Environmental Geography',
+    ],
+  },
+  {
+    id: 9,
+    name: 'Economics',
+    topics: [
+      'Microeconomics',
+      'Macroeconomics',
+      'International Economics',
+      'Public Finance',
+      'Development Economics',
+    ],
+  },
+  {
+    id: 10,
+    name: 'Political Science',
+    topics: [
+      'Political Theory',
+      'Comparative Politics',
+      'International Relations',
+      'Public Administration',
+      'Political Ideologies',
+    ],
+  },
+]
 export { logoWhite, logoBlue }

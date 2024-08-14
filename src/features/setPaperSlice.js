@@ -12,33 +12,64 @@ const initialState = {
   prepDate: '',
   dueDate: '',
   note: 'During Test Toggling, Closing and Minimizing Window is not allowed',
-  questions: [
-    {
-      questionTitle: 'what is bio',
-      questionId: 0,
-      options: [],
-      correctAnswer: 'ho me',
-      label: {
-        topic: 'sdkf',
-        class: 'dajfkq',
-        chapter: 'djklf',
-      },
+  singleQuestion: {
+    questionTitle: '',
+    questionId: 0,
+    singleOption: '',
+    options: [],
+    correctAnswer: '',
+    label: {
+      topic: '',
+      subject: '',
+      chapter: '',
     },
-  ],
+  },
+
+  questions: [],
 }
 const setPaperSlice = createSlice({
   name: 'setPaper',
   initialState,
   reducers: {
     setQuestion: (state, action) => {
-      console.log('set question')
+      const { type, value } = action.payload
+      console.log(action.payload)
+      if (type === 'QUESTION_TITLE') {
+        state.singleQuestion.questionTitle = value
+      }
+      if (type === 'OPTION_SET_TYPE') {
+        state.singleQuestion.singleOption = value
+      }
+      if (type === 'ADD_OPTION_TYPE') {
+        state.singleQuestion.options.push({ name: value })
+        state.singleQuestion.singleOption = ''
+        state.singleQuestion.options.map((item) => console.log(item))
+      }
+      if (type === 'SET_CORRECT_ANSWER_TYPE') {
+        state.singleQuestion.correctAnswer = value
+      }
+      if (type === 'ADD_QUESTION_TYPE') {
+        state.questions.push(value)
+        state.singleQuestion.questionTitle = ''
+        state.singleQuestion.options = []
+        state.singleQuestion.correctAnswer = ''
+      }
+      if (type === 'ADD_SUBJECT_LABEL_TYPE') {
+        state.singleQuestion.label.subject = value
+        console.log(state.singleQuestion.label.subject)
+      }
+      if (type === 'ADD_TOPIC_LABEL_TYPE') {
+        state.singleQuestion.label.topic = value
+        console.log(state.singleQuestion.label.topic)
+      }
     },
     setPaperInfo: (state, action) => {
       console.log('setpaper info')
     },
     setTitle: (state, action) => {
       state.testTitle = action.payload
-      console.log(state.testTitle)
+
+      console.log(action)
     },
     setDuration: (state, action) => {
       state.duration = action.payload

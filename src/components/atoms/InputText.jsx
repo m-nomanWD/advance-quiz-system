@@ -1,12 +1,15 @@
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 
-export default function InputText({ placeholder, value, handleChange, numFlag }) {
+export default function InputText({ placeholder, value, handleChange, numFlag, type }) {
  const [isError, setIsError] = useState(false)
  const dispatch = useDispatch()
  const handleOnChange = (e) => {
   if (!numFlag) {
    dispatch(handleChange(e.currentTarget.value))
+  }
+  else if (type !== undefined) {
+   dispatch(handleChange({ type: type, value: e.currentTarget.value }))
   }
   else {
    dispatch(handleChange(e.currentTarget.value.replace(/[^0-9]/g, '')))
@@ -15,7 +18,7 @@ export default function InputText({ placeholder, value, handleChange, numFlag })
 
  return (
   <div className='input-container  '>
-   <input type="text" placeholder={placeholder} className={`outline-none w-full px-4 h-10 rounded-md border  focus:border-primary_blue text-sm focbg-pale_blue ${isError ? 'border-rose-600' : ''} `} value={value} onChange={(e) => handleOnChange(e)
+   <input type="text" placeholder={placeholder} className={`outline-none w-full px-4 h-10 rounded-md border  focus:border-primary_blue text-sm  ${isError === '' ? 'border-rose-600' : ''} `} value={value} onChange={(e) => handleOnChange(e)
    } />
   </div>
  )

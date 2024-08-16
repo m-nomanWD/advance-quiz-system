@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { v4 as uuid } from 'uuid'
+import toast from 'react-hot-toast'
 
 const initialState = {
   testId: '',
@@ -6,11 +8,12 @@ const initialState = {
   teacherId: '12AHG',
   paperType: '',
   subject: '',
-  totalQuestions: '',
+  totalQuestions: 10,
   totalMarks: '',
   duration: '',
   prepDate: '',
   dueDate: '',
+  editFlag: false,
   note: 'During Test Toggling, Closing and Minimizing Window is not allowed',
   singleQuestion: {
     questionTitle: '',
@@ -49,10 +52,17 @@ const setPaperSlice = createSlice({
         state.singleQuestion.correctAnswer = value
       }
       if (type === 'ADD_QUESTION_TYPE') {
-        state.questions.push(value)
-        state.singleQuestion.questionTitle = ''
-        state.singleQuestion.options = []
-        state.singleQuestion.correctAnswer = ''
+        if (state.totalQuestions === 0) {
+          toast.error(`You Cannot add more then total question`)
+        } else {
+          const updatedValue = { ...value, questionId: uuid() }
+          console.log(updatedValue)
+          state.questions.push(updatedValue)
+          state.totalQuestions -= 1
+          state.singleQuestion.questionTitle = ''
+          state.singleQuestion.options = []
+          state.singleQuestion.correctAnswer = ''
+        }
       }
       if (type === 'ADD_SUBJECT_LABEL_TYPE') {
         state.singleQuestion.label.subject = value
@@ -61,6 +71,20 @@ const setPaperSlice = createSlice({
       if (type === 'ADD_TOPIC_LABEL_TYPE') {
         state.singleQuestion.label.topic = value
         console.log(state.singleQuestion.label.topic)
+      }
+      if (type === 'UPDATE_QUESTUON_TYPE') {
+        const updateQuestions = state.questions.map((que) => {
+          if (que.questionId === value.questionId) {
+            return value
+          }
+          return que
+        })
+        state.questions = updateQuestions
+        state.editFlag = false
+        state.singleQuestion.questionTitle = ''
+        state.singleQuestion.options = []
+        state.singleQuestion.correctAnswer = ''
+        toast.success('Question Updated Successfully')
       }
     },
     setPaperInfo: (state, action) => {
@@ -87,6 +111,16 @@ const setPaperSlice = createSlice({
       state.paperType = action.payload
       console.log(state.paperType)
     },
+    editQuestion: (state, action) => {
+      console.log(action.payload)
+      console.log(state.editFlag)
+      state.editFlag = true
+      const singleQuestion = state.questions.find(
+        (qus) => qus.questionId == action.payload
+      )
+
+      state.singleQuestion = singleQuestion
+    },
   },
 })
 export default setPaperSlice.reducer
@@ -98,4 +132,5 @@ export const {
   setTotalQuestions,
   setDueDate,
   setPaperType,
+  editQuestion,
 } = setPaperSlice.actions

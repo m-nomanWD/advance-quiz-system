@@ -9,8 +9,6 @@ export default function PaperToolbar() {
 
   const [fillDot, setFillDot] = useState(true)
   const handleClickNext = () => {
-    console.log('hello');
-
     if (testTitle === '' || paperType === '' || totalQuestions === '' || duration === '' || dueDate === '') {
       toast.error('please provide values')
     }
@@ -50,15 +48,21 @@ export default function PaperToolbar() {
           <span className="w-9 ">
             {!fillDot && <GoArrowRight className="icon"
               onClick={handleClickNext} />}
+
           </span>
         </header>
+        <div>
+          {
+            !fillDot && <PaperHead />
+          }
+          {
+            fillDot && <div>
+              <p className="font-font_palanquin text-slate_gray mt-4 -mb-5">Remaining questions to add: <span className="text-coral_red font-bold">{totalQuestions}</span></p>
+              <AddQuestionForm />
+            </div>
+          }
+        </div>
 
-        {
-          !fillDot && <PaperHead />
-        }
-        {
-          fillDot && <AddQuestionForm />
-        }
 
       </div>
     </aside>

@@ -5,7 +5,7 @@ import { FiEdit2 } from 'react-icons/fi'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { InputSelect, InputText, Button, Options } from '../../components'
-import { setQuestion } from '../../features/setPaperSlice'
+import { setQuestion, submitPaper } from '../../features/setPaperSlice'
 import { subjects } from '../../constants/constants'
 export default function AddQuestionForm() {
   const [topics, setTopics] = useState([])
@@ -64,8 +64,20 @@ export default function AddQuestionForm() {
       dispatch(setQuestion({ type: 'ADD_QUESTION_TYPE', value }))
     }
   }
+  const handleSubmitPaper = (value) => {
+
+    if (totalQuestions === 0) {
+      dispatch(submitPaper())
+      toast.success(`paper submited successfully ${totalQuestions}`
+      )
+    }
+    else {
+      toast.error(`your have to add ${totalQuestions} more questions`)
+    }
+
+  }
   return (
-    <div className='flex flex-col my-6  gap-1'>
+    <div className='flex flex-col my-6 md:min-w-64 gap-1'>
       <InputText
         placeholder='Question Title'
         value={questionTitle}
@@ -123,9 +135,8 @@ export default function AddQuestionForm() {
               Question <BiPlusCircle className='icon ml-2 mt-1 leading-none' />
             </span>
           )}
-
         </button>
-        <button className='btn px-4 opacity-5 cursor-not-allowed hover:opacity-5' >
+        <button className='btn px-4 ' onClick={() => handleSubmitPaper(totalQuestions)}>
           Submit
         </button>
       </div>

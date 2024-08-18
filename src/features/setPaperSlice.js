@@ -8,13 +8,13 @@ const initialState = {
   teacherId: '12AHG',
   paperType: '',
   subject: '',
-  totalQuestions: 10,
+  totalQuestions: 1,
   totalMarks: '',
   duration: '',
   prepDate: '',
   dueDate: '',
   editFlag: false,
-  note: 'During Test Toggling, Closing and Minimizing Window is not allowed',
+  note: ' During the Paper Closing, Toggling and minimizing will be disabled and not allowed. If you try to do this the paper once close would be considered as cancel.',
   singleQuestion: {
     questionTitle: '',
     questionId: 0,
@@ -121,6 +121,11 @@ const setPaperSlice = createSlice({
 
       state.singleQuestion = singleQuestion
     },
+    submitPaper: (state, action) => {
+      state.testId = uuid()
+      const paper = state
+      console.log(paper)
+    },
   },
 })
 export default setPaperSlice.reducer
@@ -133,4 +138,5 @@ export const {
   setDueDate,
   setPaperType,
   editQuestion,
+  submitPaper,
 } = setPaperSlice.actions

@@ -2,7 +2,8 @@ import React from 'react'
 import { Options } from '../index'
 import { FiEdit2 } from 'react-icons/fi'
 import { editQuestion } from '../../features/setPaperSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+
 
 export default function SingleQuestion({ singleQuestion }) {
  const { questionId, questionTitle, options, correctAnswer } = singleQuestion

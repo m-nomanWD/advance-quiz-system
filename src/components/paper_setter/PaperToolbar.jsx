@@ -27,7 +27,7 @@ export default function PaperToolbar() {
     dueDate,
   } = useSelector((store) => store.setPaper)
   return (
-    <aside className='w-80 py-4 max-md:w-full   '>
+    <aside className='w-80 py-4 md:px-4 max-md:w-full md:border border-pale_blue rounded-md   '>
       <div className="">
         <header className="flex justify-between items-center">
           <span className="w-9 " >

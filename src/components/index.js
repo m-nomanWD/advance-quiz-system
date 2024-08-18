@@ -14,6 +14,7 @@ import PaperHead from './forms/PaperHead'
 import AddQuestionForm from './forms/AddQuestionForm'
 import SingleQuestion from './questions/SingleQuestion'
 import Options from './questions/Options'
+import PaperHeader from './paper_setter/PaperHeader'
 export {
   Navbar,
   PaperToolbar,
@@ -31,4 +32,5 @@ export {
   AddQuestionForm,
   SingleQuestion,
   Options,
+  PaperHeader,
 }

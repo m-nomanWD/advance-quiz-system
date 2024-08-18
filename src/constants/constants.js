@@ -1,4 +1,8 @@
 import { logoWhite, logoBlue } from '../assets'
+import { IoHomeOutline } from 'react-icons/io5'
+import { PiStudent, PiUser } from 'react-icons/pi'
+import { RiFilePaper2Line } from 'react-icons/ri'
+import { TbReportAnalytics } from 'react-icons/tb'
 
 export const links = [
   {
@@ -130,4 +134,32 @@ export const subjects = [
     ],
   },
 ]
+export const teacherSidebarLink = [
+  {
+    label: 'overview',
+    link: '/teacher-dashboard/',
+    icon: IoHomeOutline,
+  },
+  {
+    label: 'results',
+    link: '/teacher-dashboard/results',
+    icon: TbReportAnalytics,
+  },
+  {
+    label: 'students',
+    link: '/teacher-dashboard/students',
+    icon: PiStudent,
+  },
+  {
+    label: 'papers',
+    link: '/teacher-dashboard/papers',
+    icon: RiFilePaper2Line,
+  },
+  {
+    label: 'profile',
+    link: '/teacher-dashboard/profile',
+    icon: PiUser,
+  },
+]
+
 export { logoWhite, logoBlue }

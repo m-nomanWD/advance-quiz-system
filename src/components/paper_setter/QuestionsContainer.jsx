@@ -1,15 +1,25 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { SingleQuestion } from '../index'
+import { SingleQuestion, PaperHeader } from '../index'
+import { TbClockQuestion } from "react-icons/tb";
 export default function QuestionsContainer() {
- const { questions } = useSelector((store) => store.setPaper)
+ const { questions,
+  testTitle,
+  paperType,
+  totalQuestions,
+  duration,
+  note
+ } = useSelector((store) => store.setPaper)
  return (
-  <main className='w-full'>
+  <main className='w-full rounded-md overflow-hidden'>
+   <PaperHeader paperHeadInfo={{ testTitle, paperType, totalQuestions, duration, note }} />
    <div >
     {
      questions.length !== 0 ? questions.map((que, index) => {
       return <SingleQuestion key={que.id} singleQuestion={que} />
-     }) : <h1 className='text-coral_red font-font_montserrat'>No Question is Added Yet</h1>
+     }) : <div className='flex items-center justify-center mt-6 text-coral_red text-8xl opacity-55'>
+      <TbClockQuestion />
+     </div>
 
     }
    </div>

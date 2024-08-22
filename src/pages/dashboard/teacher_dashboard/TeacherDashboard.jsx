@@ -8,19 +8,19 @@ export default function TeacherDashboard() {
 
  return (
   <main className='' >
-   <NavDashboard />
+   <div className='fixed min-w-full z-20 bg-white'>
+    <NavDashboard />
+   </div>
 
-   <div className='flex items-center gap-6 container mx-auto   '>
-    <ul className='flex flex-col h-screen bg-primary_blue'>
 
+   <div className='flex items-start  gap-6 md:gap-10 container mx-auto   '>
+
+    <ul className='flex flex-col h-screen bg-primary_blue fixed z-20 mt-[72px] '>
      <SidebarDashboard links={teacherSidebarLink} />
-     {/* <Link to='/set-paper'>
-      <li className='text-red-400 bg-gray-100 '>
-       New Paper
-      </li>
-     </Link> */}
     </ul>
-    <Outlet />
+    <div className='ml-16 md:ml-56 mt-[72px] '>
+     <Outlet />
+    </div>
    </div>
    <FooterDashboard />
 

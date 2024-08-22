@@ -21,7 +21,10 @@ export default function SidebarDashboard({ links }) {
  console.log(`Width: ${width}px`);
 
  return (
-  <aside className={`flex h-full relative w-fit py-2 transition-all duration-300 ${toggle ? 'min-w-56' : ''}`}>
+  <aside className={`flex min-h-full relative w-fit py-2 transition-all duration-300 z-40  ${toggle ? 'min-w-56 ' : ''}`}>
+   <div className={`md:hidden ${toggle ? 'fixed top-[72px] container mx-auto left-56  w-full min-h-svh bg-gray-700 opacity-55 -z-30 ' : ""}`}>
+
+   </div>
    <div className="py-2 w-16 z-10 flex flex-col items-center gap-7">
     <header className="text-white font-bold scale-125 mr-2 cursor-pointer" onClick={() => setToggle(!toggle)}>
      <RxHamburgerMenu />

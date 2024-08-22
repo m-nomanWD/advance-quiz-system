@@ -15,6 +15,10 @@ import AddQuestionForm from './forms/AddQuestionForm'
 import SingleQuestion from './questions/SingleQuestion'
 import Options from './questions/Options'
 import PaperHeader from './paper_setter/PaperHeader'
+import ActiveSessions from './dashboard_components/ActiveSessions'
+import Results from './dashboard_components/Results'
+import StudentsStrip from './dashboard_components/StudentsStrip'
+import UpcomingPaper from './dashboard_components/UpcomingPaper'
 export {
   Navbar,
   PaperToolbar,
@@ -33,4 +37,8 @@ export {
   SingleQuestion,
   Options,
   PaperHeader,
+  Results,
+  StudentsStrip,
+  UpcomingPaper,
+  ActiveSessions,
 }

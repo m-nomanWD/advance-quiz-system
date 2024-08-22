@@ -28,11 +28,17 @@
   h1 {
     @apply font-font_palanquin font-bold text-3xl capitalize;
   }
+  h3 {
+    @apply font-font_palanquin  text-xl font-semibold  capitalize tracking-wide;
+  }
   li {
     @apply text-white list-none mr-2 cursor-pointer capitalize;
   }
   .input-container {
     @apply my-2 rounded-md w-full;
+  }
+  .label {
+    @apply px-2 rounded-full inline-flex items-center font-font_palanquin;
   }
   .input {
     @apply outline-none w-full px-4 h-10 rounded-md border  focus:border-primary_blue text-sm;
@@ -40,7 +46,16 @@
   .btn {
     @apply bg-primary_blue border-none hover:opacity-85  py-2 rounded-md text-white tracking-widest font-font_palanquin text-lg mt-4;
   }
+  .btn-outline {
+    @apply text-primary_blue uppercase text-sm flex items-center transition-all duration-200  font-semibold hover:opacity-70;
+  }
+  .card-header {
+    @apply py-2 border-b border-pale_blue;
+  }
   .icon {
-    @apply text-primary_blue text-xl cursor-pointer;
+    @apply text-primary_blue text-xl cursor-pointer hover:opacity-70 transition-all duration-200;
+  }
+  .card {
+    @apply shadow-md  shadow-pale_blue rounded-md;
   }
 }

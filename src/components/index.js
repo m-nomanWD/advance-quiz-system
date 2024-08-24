@@ -19,6 +19,9 @@ import ActiveSessions from './dashboard_components/ActiveSessions'
 import Results from './dashboard_components/Results'
 import StudentsStrip from './dashboard_components/StudentsStrip'
 import UpcomingPaper from './dashboard_components/UpcomingPaper'
+import SessionResultCard from './dashboard_components/SessionResultCard'
+import SingleStudentStrip from './dashboard_components/SingleStudentStrip'
+import SingleSessionCard from './dashboard_components/SingleSessionCard'
 export {
   Navbar,
   PaperToolbar,
@@ -41,4 +44,7 @@ export {
   StudentsStrip,
   UpcomingPaper,
   ActiveSessions,
+  SessionResultCard,
+  SingleStudentStrip,
+  SingleSessionCard,
 }

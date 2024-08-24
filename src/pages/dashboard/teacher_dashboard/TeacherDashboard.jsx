@@ -18,7 +18,7 @@ export default function TeacherDashboard() {
     <ul className='flex flex-col h-screen bg-primary_blue fixed z-20 mt-[72px] '>
      <SidebarDashboard links={teacherSidebarLink} />
     </ul>
-    <div className='ml-16 md:ml-56 mt-[72px] '>
+    <div className='ml-16  w-full md:ml-56 mt-[72px] '>
      <Outlet />
     </div>
    </div>

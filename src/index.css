@@ -58,4 +58,21 @@
   .card {
     @apply shadow-md  shadow-pale_blue rounded-md;
   }
+  .scrollbar-custom {
+    scrollbar-width: 1px;
+    scrollbar-color: #dddddd none; /* Thumb color | Track color */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 2px; /* Width of the scrollbar */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #dddddd; /* Thumb color */
+    border-radius: 9999px; /* Rounded corners for the thumb */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: #f5f6ff; /* Track color */
+  }
 }

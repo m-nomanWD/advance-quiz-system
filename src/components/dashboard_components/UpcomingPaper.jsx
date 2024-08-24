@@ -4,7 +4,7 @@ import { BiEdit, BiPlusCircle } from 'react-icons/bi'
 
 export default function UpcomingPaper() {
  return (
-  <article className='card min-w-96 bg-white '>
+  <article className='card min-w-80 sm:w-full bg-white '>
 
    <header className=' card-header '>
     <div className='flex items-center justify-between px-4'>
@@ -19,11 +19,11 @@ export default function UpcomingPaper() {
      </Link>
     </div>
    </header>
-   <div className='px-4 py-4 relative border-b border-pale_blue flex items-center justify-between'>
+   <div className='px-4 py-4 relative border-b  border-pale_blue flex items-center justify-between'>
     <div>
-     <h2 className='font-semibold text-lg tracking-wide text-slate_gray leading-none'>
+     <h5 className='font-semibold text-md tracking-wide text-slate_gray leading-none'>
       Test Title here
-     </h2>
+     </h5>
      <p className=' w-fit font-font_palanquin mb-2 '>
       Session here
      </p>
@@ -44,9 +44,9 @@ export default function UpcomingPaper() {
    </div>
    <div className='px-4 py-4 relative border-b border-pale_blue flex items-center justify-between'>
     <div>
-     <h2 className='font-semibold text-lg tracking-wide text-slate_gray leading-none'>
+     <h5 className='font-semibold text-md tracking-wide text-slate_gray leading-none '>
       Test Title here
-     </h2>
+     </h5>
      <p className=' w-fit font-font_palanquin mb-2 '>
       Session here
      </p>
@@ -67,9 +67,9 @@ export default function UpcomingPaper() {
    </div>
    <div className='px-4 py-4 relative border-b border-pale_blue flex items-center justify-between'>
     <div>
-     <h2 className='font-semibold text-lg tracking-wide text-slate_gray leading-none'>
+     <h5 className='font-semibold text-md tracking-wide text-slate_gray leading-none'>
       Test Title here
-     </h2>
+     </h5>
      <p className=' w-fit font-font_palanquin mb-2 '>
       Session here
      </p>

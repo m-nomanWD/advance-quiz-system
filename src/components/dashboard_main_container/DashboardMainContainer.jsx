@@ -2,7 +2,7 @@ import React from 'react'
 import { ActiveSessions, Results, StudentsStrip, UpcomingPaper } from '../index'
 export default function DashboardMainContainer() {
  return (
-  <main className='mt-6  '>
+  <main className='pt-6'>
    <h1 className='pl-4'>Dashboard</h1>
    <div className='flex gap-6 p-4  min-w-full max-xl:flex-col   '>
 

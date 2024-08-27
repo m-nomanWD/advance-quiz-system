@@ -7,7 +7,7 @@ import { FooterDashboard, SidebarDashboard, NavDashboard, DashboardMainConatiner
 export default function TeacherDashboard() {
 
  return (
-  <main className='' >
+  <main className=' bg-pale_blue' >
    <div className='fixed min-w-full z-20 bg-white'>
     <NavDashboard />
    </div>

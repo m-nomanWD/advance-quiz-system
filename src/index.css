@@ -56,15 +56,15 @@
     @apply text-primary_blue text-xl cursor-pointer hover:opacity-70 transition-all duration-200;
   }
   .card {
-    @apply shadow-md  shadow-pale_blue rounded-md;
+    @apply shadow-md bg-white  shadow-light_gray rounded-md;
   }
   .scrollbar-custom {
-    scrollbar-width: 1px;
+    scrollbar-width: 4px;
     scrollbar-color: #dddddd none; /* Thumb color | Track color */
   }
 
   .scrollbar-custom::-webkit-scrollbar {
-    width: 2px; /* Width of the scrollbar */
+    width: 4px; /* Width of the scrollbar */
   }
 
   .scrollbar-custom::-webkit-scrollbar-thumb {

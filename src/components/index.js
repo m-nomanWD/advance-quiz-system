@@ -22,6 +22,12 @@ import UpcomingPaper from './dashboard_components/UpcomingPaper'
 import SessionResultCard from './dashboard_components/SessionResultCard'
 import SingleStudentStrip from './dashboard_components/SingleStudentStrip'
 import SingleSessionCard from './dashboard_components/SingleSessionCard'
+import Table from './dashboard_components/Table'
+import DetailResult from './dashboard_components/DetailResult'
+import TableCellSimple from './atoms/TableCellSimple'
+import TableHeadingCell from './atoms/TableHeadingCell'
+import TableBoolenCell from './atoms/TableBoolenCell'
+import TableHeader from './atoms/TableHeader'
 export {
   Navbar,
   PaperToolbar,
@@ -47,4 +53,10 @@ export {
   SessionResultCard,
   SingleStudentStrip,
   SingleSessionCard,
+  Table,
+  DetailResult,
+  TableCellSimple,
+  TableHeadingCell,
+  TableBoolenCell,
+  TableHeader,
 }

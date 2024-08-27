@@ -11,6 +11,8 @@ export default {
         light_gray: '#DDDDDD',
         slate_gray: '#6D6D6D',
         pale_blue: '#F5F6FF',
+        fail_bg: '#FF645220',
+        pass_bg: '#39991820',
       },
       fontFamily: {
         font_montserrat: ['Montserrat', 'sans-serif'],

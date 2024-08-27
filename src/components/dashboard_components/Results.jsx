@@ -1,4 +1,5 @@
 import { SessionResultCard } from '../index'
+import { Link } from 'react-router-dom';
 const Results = () => {
  return (
   <div className='card min-w-[360px] sm:w-full '>
@@ -8,7 +9,9 @@ const Results = () => {
     </h3>
    </header>
    <div className='grid sm:grid-cols-2  grid-cols-1 p-4 gap-3 max-h-[292px] overflow-y-scroll scrollbar-custom'>
-    <SessionResultCard colr='coral_red' />
+    <Link to='session-details/124'>
+     <SessionResultCard colr='coral_red' />
+    </Link>
     <SessionResultCard colr='pale_blue' />
     <SessionResultCard colr='light_gray' />
     <SessionResultCard colr='green' />

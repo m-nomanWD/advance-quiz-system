@@ -16,7 +16,7 @@ export default function Options({ options, flag, fromQuestionAnswer }) {
       </span>
       <p className={`font-font_palanquin text-lg  break-words overflow-hidden ${correctAnswer === option.name ? 'text-green font-bold' : 'text-black'} ${fromQuestionAnswer !== undefined && fromQuestionAnswer === option.name && 'text-green font-bold'}`}
       >
-       {option.name}
+       {option.name ? option.name : option}
       </p>
      </div>
     })

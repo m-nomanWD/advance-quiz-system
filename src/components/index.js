@@ -28,6 +28,7 @@ import TableCellSimple from './atoms/TableCellSimple'
 import TableHeadingCell from './atoms/TableHeadingCell'
 import TableBoolenCell from './atoms/TableBoolenCell'
 import TableHeader from './atoms/TableHeader'
+import SingleStudentResult from './dashboard_components/SingleStudentResult'
 export {
   Navbar,
   PaperToolbar,
@@ -59,4 +60,5 @@ export {
   TableHeadingCell,
   TableBoolenCell,
   TableHeader,
+  SingleStudentResult,
 }

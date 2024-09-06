@@ -9,7 +9,7 @@ export default function StudentsStrip() {
     <h3 className='px-4 py-2'>Students Need Help</h3>
    </header>
    <div className='max-h-[292px] overflow-y-scroll scrollbar-custom'>
-    <Link to=':Muhammad-Noman/123'>
+    <Link to='Muhammad-Noman/123'>
      <SingleStudentStrip />
     </Link>
     <SingleStudentStrip />

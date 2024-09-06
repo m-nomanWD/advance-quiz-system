@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home, TeacherDashboard, SetPaper } from './pages';
-import { DashboardMainConatiner, DetailResult } from './components/index'
+import { DashboardMainConatiner, DetailResult, SingleStudentResult } from './components/index'
 import { teacherSidebarLink } from './constants/constants';
 import { MdAllInclusive } from 'react-icons/md';
 
@@ -20,12 +20,14 @@ function App() {
           <Route path="students" element={<div>Students Page</div>} />
           <Route path="papers" element={<div>Papers Page</div>} />
           <Route path="profile" element={<div>Profile Page</div>} />
-          <Route path="session-details/:id" element={<DetailResult />} />
+          <Route path="detail-result/:session-name/:id" element={<DetailResult />} />
           <Route path=":name/:id" element={<div>Student Detail Page</div>} />
+          <Route path='detail-result/:session-name/:id/:student-name/:id' element={<SingleStudentResult />} />
+          <Route path='detail-result/:session-name/:id/all-papers' element={<div>all papers</div>} />
         </Route>
 
         {/* Set Paper route without sidebar */}
-        <Route path="/set-paper" element={<SetPaper />} />
+        <Route path=":type-paper" element={<SetPaper />} />
       </Routes>
     </Router>
   );

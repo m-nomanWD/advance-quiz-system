@@ -39,7 +39,9 @@ export default function UpcomingPaper() {
     </div>
 
     <div>
-     <span className='icon'><BiEdit /></span>
+     <Link to='/edit-paper'>
+      <span className='icon'><BiEdit /></span>
+     </Link>
     </div>
    </div>
    <div className='px-4 py-4 relative border-b border-pale_blue flex items-center justify-between'>
